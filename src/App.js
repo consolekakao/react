@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
+import aa from './TOC.js';
 
+class Subject extends Component{
+ 
 
-function App() {
-  
+  btclick = () => {
+    document.writeln(aa());
+  }
+  render(){
+    return(
+        <button onClick={this.btclick}>click</button>
+    );
+  }
+}
+
+function App() {  
+
   return (
-    <div className="App-frame">
-
-          <div className="App-top">
-            top
-          </div>
-
-<div className="App-side">
-  side
-</div>
-
-<div className="App-main">
-  main
-</div>
-
+    
+     <div className="App-frame">
+     <input type="text"/><br></br>
+     <input type="text"/><br></br>
+     <Subject></Subject>
     </div>
   );
 }
 
 export default App;
+
